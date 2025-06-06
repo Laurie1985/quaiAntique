@@ -11980,6 +11980,10 @@ html {
   min-height: 100%;
 }
 
+.nav-link {
+  font-size: 14px;
+}
+
 main {
   margin-bottom: 220px;
 }
@@ -11989,4 +11993,14 @@ footer.footer {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+p {
+  font-family: "Hind Madurai", serif;
+  font-size: 12px;
+}
+
+.footer h3, .footer .h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
 }/*# sourceMappingURL=main.css.map */
