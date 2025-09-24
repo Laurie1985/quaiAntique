@@ -12093,6 +12093,12 @@ p {
   color: #906427;
 }
 
+.allreservations a {
+  display: block;
+  color: #292222;
+  padding: 10px;
+}
+
 @media (max-width: 768px) {
   .hero-scene .hero-scene-content {
     height: 200px;
