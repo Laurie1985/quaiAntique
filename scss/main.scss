@@ -3,33 +3,32 @@
 
 
 html {
-    position: relative;
     min-height: 100%;
 }
 
 .nav-link {
-    font-size: 14px;
-}
-
-main {
-    margin-bottom: 220px;
+    font-size: 16px;
+    margin-right: 12px;
 }
 
 footer.footer {
     padding: 15px;
-    position: absolute;
     bottom: 0;
     width: 100%;
 }
 
 p {
     font-family: $font-family-serif;
-    font-size: 12px
+    font-size: 16px
 }
 
 .footer h3 {
     font-family: $font-family-sans-serif;
-    font-size: 18px
+    font-size: 16px
+}
+
+.footer p {
+    font-size: 14px;
 }
 
 .hero-scene {
@@ -64,4 +63,49 @@ p {
 
 .hero-scene p {
     font-family: $font-family-sans-serif;
+}
+
+.image-card {
+    position: relative;
+
+
+    &:hover {
+        .titre-image {
+            opacity: 1;
+        }
+
+        img {
+            filter: brightness(0.3);
+        }
+    }
+
+    img {
+        transition: all 0.3s;
+        height: 200px;
+    }
+
+    .titre-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.3s;
+    }
+}
+
+.menu {
+    background-image: url('../images/casey-lee-awj7sRviVXo-unsplash.jpg');
+    opacity: 75%;
+    background-size: contain;
+}
+
+@media (max-width: 768px) {
+    .hero-scene .hero-scene-content {
+        height: 200px;
+    }
+
+    .image-card img {
+        height: 110px;
+    }
 }
