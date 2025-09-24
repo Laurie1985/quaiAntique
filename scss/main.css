@@ -11975,8 +11975,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html {
-  min-height: 100%;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 .nav-link {
@@ -12006,6 +12012,7 @@ p {
 
 .hero-scene {
   position: relative;
+  margin-bottom: 15px;
 }
 .hero-scene::before {
   content: "";
@@ -12068,6 +12075,10 @@ p {
 
 .carte p {
   font-size: 18px;
+}
+
+.form-label {
+  color: #906427;
 }
 
 @media (max-width: 768px) {
