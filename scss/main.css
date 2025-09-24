@@ -11980,8 +11980,8 @@ html {
 }
 
 .nav-link {
-  font-size: 16px;
-  margin-right: 12px;
+  font-size: 18px;
+  margin-right: 16px;
 }
 
 footer.footer {
@@ -12058,7 +12058,16 @@ p {
 .menu {
   background-image: url("../images/casey-lee-awj7sRviVXo-unsplash.jpg");
   opacity: 75%;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 100px 0;
+}
+
+.carte p {
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
@@ -12067,5 +12076,13 @@ p {
   }
   .image-card img {
     height: 110px;
+  }
+  .carte {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .a-la-carte,
+  .formules {
+    width: 100% !important;
   }
 }/*# sourceMappingURL=main.css.map */
