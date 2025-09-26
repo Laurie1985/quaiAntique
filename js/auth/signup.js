@@ -93,11 +93,16 @@ function validateRequired(input) {
 }
 
 function inscrireUtilisateur() {
+    //Crée un nouvel objet FormData à partir du formulaire contenu dans la variable "formInscription"
     let dataForm = new FormData(formInscription);
 
+    //Crée un nouvel objet Headers pour définir les en-têtes de la requête HTTP
     const myHeaders = new Headers();
+
+    //Ajoute l'en-tête "Content-Type" avec la valeur "application/json"
     myHeaders.append("Content-Type", "application/json");
 
+    //Convertit les données du formulaire en une chaîne JSON
     const raw = JSON.stringify({
         "firstName": dataForm.get("Nom"),
         "lastName": dataForm.get("Prenom"),
@@ -105,15 +110,31 @@ function inscrireUtilisateur() {
         "password": dataForm.get("Password")
     });
 
+    //Configure les options de la requête HTTP
     const requestOptions = {
+        // Méthode de la requête : "POST" pour envoyer des données au serveur
         method: "POST",
+        //Définit les en-têtes de la requête en utilisant l'objet Headers créé précédemment
         headers: myHeaders,
+        //Corps de la requête : les données JSON converties en chaîne
         body: raw,
+        //Redirection à suivre en cas de besoin ("follow" suit automatiquement les redirections)
         redirect: "follow"
     };
 
     fetch("http://127.0.0.1:8000/api/registration", requestOptions)
-        .then((response) => response.json())
-        .then((result) => console.log(result))
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            else {
+                alert("Erreur lors de l'inscription");
+            }
+
+        })
+        .then(result => {
+            alert("Bravo " + dataForm.get("Prenom") + ", vous êtes maintenant inscrit, vous pouvez vous connecter.")
+            document.location.href = "/signin";
+        })
         .catch((error) => console.error(error));
 }
