@@ -23,7 +23,7 @@ jobs:
         username: quaiantiquelb
         password: ${{ secrets.ftp_password }}
         protocol: ftps
-        security: strict
+        security: loose
         exclude: |
           **/.git*
           **/.git*/**
