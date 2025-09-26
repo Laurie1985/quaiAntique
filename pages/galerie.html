@@ -12,68 +12,7 @@
     <div class="text-center" data-show="admin">
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une photo</button>
     </div>
-    <div class="row row-cols-2 row-cols-lg-3">
-        <div class="col p-4">
-            <div class="image-card text-white">
-                <img src="../images/pexels-pixabay-262978.jpg" class="rounded w-100" alt="photos d'assiettes présentées">
-                <p class="titre-image">entrées</p>
-                <div class="action-image-buttons" data-show="admin">
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-                </div>
-            </div>
-        </div>
-        <div class="col p-4">
-            <div class="image-card text-white">
-                <img src="../images/pexels-chanwalrus-958545.jpg" class="rounded w-100" alt="table servie avec des plats">
-                <p class="titre-image">A partager</p>
-                <div class="action-image-buttons" data-show="admin">
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-                </div>
-            </div>
-        </div>
-        <div class="col p-4">
-            <div class="image-card text-white">
-                <img src="../images/pexels-mali-64208.jpg" class="rounded w-100" alt="assiette de pâtes">
-                <p class="titre-image">pâtes au poisson</p>
-                <div class="action-image-buttons" data-show="admin">
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-                </div>
-            </div>
-        </div>
-        <div class="col p-4">
-            <div class="image-card text-white">
-                <img src="../images/pexels-pixabay-262918.jpg" class="rounded w-100" alt="assiettes sur une table">
-                <p class="titre-image">Pour les petites faims</p>
-                <div class="action-image-buttons" data-show="admin">
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-                </div>
-            </div>
-        </div>
-        <div class="col p-4">
-            <div class="image-card text-white">
-                <img src="../images/pexels-chanwalrus-941861.jpg" class="rounded w-100" alt="photo d'une salle de restaurant">
-                <p class="titre-image">grande salle</p>
-                <div class="action-image-buttons" data-show="admin">
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-                </div>
-            </div>
-        </div>
-        <div class="col p-4">
-            <div class="image-card text-white">
-                <img src="../images/pexels-ella-olsson-572949-1640772.jpg" class="rounded w-100" alt="assiettes de frites et sauces">
-                <p class="titre-image">frites maison</p>
-                <div class="action-image-buttons" data-show="admin">
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#DeletePhotoModal"><i class="bi bi-trash"></i></button>
-                </div>
-            </div>
-        </div>
-
+    <div class="row row-cols-2 row-cols-lg-3" id="allImages">
     </div>
     <div class="text-center" data-show="disconnected" data-show="client" >
         <a href="#" class="btn btn-primary">Réserver une table</a>
