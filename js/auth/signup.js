@@ -107,7 +107,9 @@ function inscrireUtilisateur() {
         "firstName": dataForm.get("Nom"),
         "lastName": dataForm.get("Prenom"),
         "email": dataForm.get("Email"),
-        "password": dataForm.get("Password")
+        "password": dataForm.get("Password"),
+        "guestNumber": 1,  // (valeur par défaut)
+        "allergy": null
     });
 
     //Configure les options de la requête HTTP

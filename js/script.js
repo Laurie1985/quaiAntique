@@ -113,19 +113,17 @@ function getInfosUser() {
         redirect: "follow"
     }
 
-    fetch(apiUrl + "account/me", requestOptions)
+    return fetch(apiUrl + "me", requestOptions)
         .then(response => {
             if (response.ok) {
                 return response.json();
             }
             else {
-                console.log("Impossible de récupérer les informations utilisateurs");
+                throw new Error("Impossible de récupérer les informations utilisateurs");
             }
-        })
-        .then(result => {
-            return result;
         })
         .catch(error => {
             console.error("erreur lors de la récupération des informations utilisateurs");
+            throw error;
         })
 };
