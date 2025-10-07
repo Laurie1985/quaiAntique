@@ -1,4 +1,3 @@
-
 <div class="hero-scene text-center text-white">
     <div class="hero-scene-content">
         <h1>Galerie</h1>
@@ -9,36 +8,39 @@
     <div>
         <h2 class="text-center text-primary p-4" data-show="disconnected">Découvrez notre galerie photos</h2>
     </div>
-    <div class="text-center" data-show="admin">
+    <div class="text-center mb-3" data-show="admin">
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#EditionPhotoModal">Ajouter une photo</button>
     </div>
     <div class="row row-cols-2 row-cols-lg-3" id="allImages">
+        <p class="text-center text-muted">Chargement de la galerie...</p>
     </div>
-    <div class="text-center" data-show="disconnected" data-show="client" >
-        <a href="#" class="btn btn-primary">Réserver une table</a>
+    <div class="text-center mt-4">
+        <a href="/reserver" class="btn btn-primary">Réserver une table</a>
     </div>
 </div>
 
-<!-- Modal edition -->
+<!-- Modal ajout photo -->
 <div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Edition Photo</h2>
+                <h2 class="modal-title fs-5" id="EditionPhotoModalLabel">Ajouter une photo</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="addPhotoForm">
                     <div class="mb-3">
-                    <label for="NamePhotoInput" class="form-label">Titre</label>
-                    <input type="text" class="form-control" id="NamePhotoInput" placeholder="Lasagnes à la bolognese" name="Titre"> 
+                        <label for="NamePhotoInput" class="form-label">Titre</label>
+                        <input type="text" class="form-control" id="NamePhotoInput" placeholder="Lasagnes à la bolognese" name="Titre" required> 
                     </div>
                     <div class="mb-3">
-                    <label for="ImageInput" class="form-label">Image</label>
-                    <input type="file" class="form-control" id="ImageInput"  name="Image">
+                        <label for="ImageInput" class="form-label">Image</label>
+                        <input type="file" class="form-control" id="ImageInput" name="Image" accept="image/*" required>
+                        <small class="form-text text-muted">⚠️ Note : Le fichier doit être uploadé manuellement dans /public/uploads/pictures/</small>
                     </div>
                     <div class="text-center">
-                        <button type="button" class="btn btn-primary">Enregistrer</button>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                     </div>
                 </form>
             </div>
@@ -51,21 +53,21 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Êtes-vous sûr de vouloir supprimer cette photo ?</h2>
+                <h2 class="modal-title fs-5" id="DeletePhotoModalLabel">Supprimer cette photo ?</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <p>Titre</p>
-                        <img src="../images/pexels-ella-olsson-572949-1640772.jpg" class="rounded w-100" alt=""> 
-                    </div>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-danger">Supprimer</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    </div>
-                </form>
+                <div class="mb-3">
+                    <p><strong>Titre :</strong> <span id="deletePhotoTitle"></span></p>
+                    <img id="deletePhotoImage" src="" class="rounded w-100" alt="Photo à supprimer"> 
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Supprimer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="/js/galerie.js"></script>
