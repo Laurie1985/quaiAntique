@@ -1,0 +1,38 @@
+<div class="hero-scene text-center text-white">
+    <div class="hero-scene-content">
+        <p>Découvrez la créativité de notre chef à travers</p>
+        <h1>La carte</h1>
+    </div>
+</div>
+
+<section class="container">
+    <div>
+        <h3 class="text-center p-4 text-primary">
+            Embarquez pour un voyage culinaire où chaque plat raconte une histoire de passion et de savoir-faire. 
+        </h3>
+    </div>
+    <div class="menu d-flex justify-content-center align-items-center">
+        <div class="container bg-primary rounded text-white text-center m-4">
+            <h2 class="m-4">Notre carte</h2>
+            <div class="carte d-flex flex-wrap">
+                <!-- Plats à la carte (géré par Javascript) -->
+                <div class="a-la-carte d-flex flex-column p-4 w-50">
+                    <div id="foodsByCategory">
+                        <p class="text-center">Chargement de la carte...</p>
+                    </div>
+                </div>
+                
+                <!-- Menus/Formules (géré par Javascript) -->
+                <div class="formules d-flex flex-column p-4 w-50">
+                    <h3 class="m-4">Nos menus</h3>
+                    <div id="menusList">
+                        <p class="text-center">Chargement des menus...</p>
+                    </div>
+                    <h1 class="mt-5 text-black">Belle découverte !</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/js/carte.js"></script>
